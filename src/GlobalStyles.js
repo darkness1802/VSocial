@@ -17,6 +17,14 @@ const GlobalStyle = createGlobalStyle`
       --search-padding: 0.6rem 1rem;
       --card-padding: 1rem;
     }
+    .container {
+      width: 80%;
+      margin: 0 auto;
+    }
+    img {
+      display: block;
+      width: 100%;
+    }
 `;
 
 export default GlobalStyle;

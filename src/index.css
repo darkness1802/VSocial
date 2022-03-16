@@ -27,7 +27,7 @@
   --card-padding: 1rem;
 }
 
-.App {
+body {
   font-family: "Poppins", sans-serif;
   color: var(--color-dark);
   background: var(--color-light);

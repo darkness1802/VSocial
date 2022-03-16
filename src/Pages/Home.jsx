@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
+import Feeds from '../comps/Feeds/Feeds'
 import Sidebar from '../comps/Sidebar/Sidebar'
+import Stories from '../comps/Stories/Stories'
 import * as $ from "./Home.styles"
 
 function Home() {
@@ -39,6 +41,25 @@ function Home() {
 
             </$.Left>
             <$.Middle>
+                <Stories>
+                    <Stories.Item picture={"./images/avt2.jpg"} title={"Your Story"}/>
+                    <Stories.Item picture={"./images/avt3.jpg"} title={"Tung Hwang"}/>
+                    <Stories.Item picture={"./images/avt4.jpg"} title={"Tung Lone"}/>
+                    <Stories.Item picture={"./images/avt5.jpg"} title={"Darkness Scholar"}/>
+                    <Stories.Item picture={"./images/avt6.jpg"} title={"Black Rose"}/>
+                </Stories>
+
+                <$.Form>
+                    <$.Photo>
+                        <img src="./images/avt2.jpg" alt="" />
+                    </$.Photo>
+                    <$.Input type="text" placeholder="What's on your mind ?" />
+                    <button type="submit" className="btn btn-primary">Post</button>
+                </$.Form>
+
+                <Feeds>
+                    <Feeds.Item />
+                </Feeds>
 
             </$.Middle>
             <$.Right>
@@ -51,4 +72,4 @@ function Home() {
 
 export default Home
 
-// 48:41
+// 1 11 

@@ -18,7 +18,7 @@ function Navigator() {
                 <$.Creator>
                     <Button>Create</Button>
                     <$.Avatar>
-                        <img src="./images/avt1.jpg" alt="" />
+                        <img src="./images/avt2.jpg" alt="" />
                     </$.Avatar>
                 </$.Creator>
             </div>

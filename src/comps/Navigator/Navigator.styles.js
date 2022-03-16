@@ -13,7 +13,7 @@ export const Navbar = styled.nav`
       justify-content: space-between;
   }
   .search-bar {
-      background: var(--color-light);
+      background: var(--color-secondary);
       border-radius: var(--border-radius);
       padding: var(--search-padding);
 

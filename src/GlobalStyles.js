@@ -16,6 +16,8 @@ const GlobalStyle = createGlobalStyle`
       --btn-padding: 0.6rem;
       --search-padding: 0.6rem 1rem;
       --card-padding: 1rem;
+      --sticky-top-left: 5.4rem;
+      --sticky-top-right: -18rem;
     }
     .container {
       width: 80%;

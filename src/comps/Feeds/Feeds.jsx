@@ -7,7 +7,7 @@ function Feeds({ children }) {
   </$.Feeds>
 }
 
-Feeds.Item = function () {
+Feeds.Item = function ({photo}) {
     return <$.Item> 
         <$.Head>
             <$.User>
@@ -26,7 +26,7 @@ Feeds.Item = function () {
 
         </$.Head>
         <div className="photo">
-            <img src="./images/story1.jpg" alt="" />
+            <img src={photo} alt="" />
         </div>
         <$.Actions>
             <$.Interaction>

@@ -69,6 +69,18 @@ export const Popup = styled.div`
         gap: 1rem;
         margin-bottom: 1rem;
     }
+
+    @media (max-width: 992px) {
+        position: absolute;
+        left: -20rem;
+        width: 20rem;
+        &::before {
+            position: absolute;
+            top: 1.3rem;
+            left: calc(20rem - 0.6rem);
+            display: block;
+        }
+    }
 `;
 
 export const Time = styled.small`
@@ -78,6 +90,9 @@ export const Time = styled.small`
 export const Title = styled.h3`
   margin-left: 1.5rem;
   font-size: 1rem;
+  @media (max-width: 1200px) {
+    display: none;
+  }
 `;
 
 export const Icon = styled.i`
@@ -97,4 +112,9 @@ export const Count = styled.small`
     position: absolute;
     top: -0.2rem;
     right: -0.3rem;
+`;
+
+export const Notifications = styled.div`
+    cursor: pointer;
+    color: var(--color-dark);
 `;

@@ -77,3 +77,9 @@ img {
 .text-muted {
   color: var(--color-gray);
 }
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 96%;
+  }
+}

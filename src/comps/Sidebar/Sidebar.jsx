@@ -20,7 +20,7 @@ Sidebar.Notifications = function _Notifications({ active, icon, text, popup, sho
         onOutsideClick={() => {
             showPopup(false)
         }}>
-        <div className={`menu-item ${active && "active"}`} onClick={() => showPopup(!popup)}>
+        <$.Notifications className={`menu-item ${active && "active"}`} onClick={() => showPopup(!popup)}>
             <span><$.Icon className={icon} /><$.Count>2</$.Count></span><$.Title>{text}</$.Title>
             {popup && <$.Popup>
                 <div>
@@ -42,7 +42,7 @@ Sidebar.Notifications = function _Notifications({ active, icon, text, popup, sho
                     </div>
                 </div>
             </$.Popup>}
-        </div>
+        </$.Notifications>
     </OutsideClickHandler>
 }
 

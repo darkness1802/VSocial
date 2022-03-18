@@ -8,7 +8,7 @@ export const Feeds = styled.div`
         padding: var(--card-padding);
         margin: 1rem 0;
         font-size: 0.85rem;
-        line-height: 1.5%;
+        line-height: 1.5;
         .photo {
             border-radius: var(--card-border-radius);
             overflow: hidden;
@@ -28,6 +28,9 @@ export const Feeds = styled.div`
                 &:first-child {
                     margin: 0;
                 }
+            }
+            p {
+                margin-left: 0.5rem;
             }
         }
     `;

@@ -13,7 +13,7 @@ export const Navbar = styled.nav`
       justify-content: space-between;
   }
   .search-bar {
-      background: var(--color-secondary);
+      background: var(--color-light);
       border-radius: var(--border-radius);
       padding: var(--search-padding);
 
@@ -26,6 +26,9 @@ export const Navbar = styled.nav`
         &::placeholder {
             color: var(--color-gray);
         }
+      }
+      @media (max-width: 992px) {
+        display: none;
       }
   }
 `;

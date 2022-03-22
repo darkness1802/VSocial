@@ -7,16 +7,16 @@ function Feeds({ children }) {
   </$.Feeds>
 }
 
-Feeds.Item = function ({photo}) {
+Feeds.Item = function ({data}) {
     return <$.Item> 
         <$.Head>
             <$.User>
                 <div className="profile-photo">
-                    <img src="./images/avt2.jpg" alt="" />
+                    <img src={"./images/avt5.jpg"} alt="" />
                 </div>
                 <div className="info">
-                    <h3>Tung Hwang </h3>
-                    <small>Mars, 14 Minutes ago</small>
+                    <h3>{data.userID}</h3>
+                    <a href={`/${localStorage.getItem('user')}/${data._id}`}><small>Mars, 14 Minutes ago</small></a>
                 </div>
             </$.User>
 
@@ -26,7 +26,7 @@ Feeds.Item = function ({photo}) {
 
         </$.Head>
         <div className="photo">
-            <img src={photo} alt="" />
+            <img src={data.image} alt="" />
         </div>
         <$.Actions>
             <$.Interaction>
@@ -48,7 +48,7 @@ Feeds.Item = function ({photo}) {
 
         <div className="caption">
             <p>
-                <b>Tung Lone</b> My life like shiet!!!
+                <b>Tung Lone</b> {data.content}
                 <span className="harsh-tag">#hehehe</span>
             </p>
         </div>

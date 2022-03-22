@@ -1,5 +1,6 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import * as $ from './Feeds.styles'
+import axios from 'axios'
 
 function Feeds({ children }) {
   return <$.Feeds>
@@ -7,7 +8,29 @@ function Feeds({ children }) {
   </$.Feeds>
 }
 
-Feeds.Item = function ({data}) {
+Feeds.Item = function __Item__({data}) {
+
+    let [isLiked, $isLiked] = useState() 
+
+    useEffect(() => {
+        // check isLiked Post
+        axios.post(`http://localhost:4444/api/poster/isliked/${data._id}`, { uid: localStorage.getItem('user') })
+        .then((response) => {
+            $isLiked(true)
+        }).catch(error => {
+            $isLiked(false)
+        })
+    }, [])
+
+    const like = () => {
+        
+        axios.put(`http://localhost:4444/api/poster/like/${data._id}`, { uid: localStorage.getItem('user') })
+        .then((response) => {
+            console.log(response.data);
+            $isLiked(!isLiked)
+        }).catch((err) => { console.log(err) })
+    }
+
     return <$.Item> 
         <$.Head>
             <$.User>
@@ -16,7 +39,7 @@ Feeds.Item = function ({data}) {
                 </div>
                 <div className="info">
                     <h3>{data.userID}</h3>
-                    <a href={`/${localStorage.getItem('user')}/${data._id}`}><small>Mars, 14 Minutes ago</small></a>
+                    <a href={`/userid=${localStorage.getItem('user')}/post=${data._id}`}><small>Mars, 14 Minutes ago</small></a>
                 </div>
             </$.User>
 
@@ -30,7 +53,9 @@ Feeds.Item = function ({data}) {
         </div>
         <$.Actions>
             <$.Interaction>
-                <span><i className="uil uil-heart"></i></span>
+                <span>
+                    { isLiked ? <i className="uil uil-heart-break" onClick={like}/>:<i className="uil uil-heart" onClick={like}/> }
+                </span>
                 <span><i className="uil uil-comment-dots"></i></span>
                 <span><i className="uil uil-share-alt"></i></span>
             </$.Interaction>

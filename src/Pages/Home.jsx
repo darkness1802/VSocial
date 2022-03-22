@@ -34,7 +34,6 @@ function Home() {
 
         axios.get(`http://localhost:4444/api/poster/newsfeed/${localStorage.getItem("user")}`)
         .then(response => {
-            console.log(response.data)
             $feeds(response.data)
         }).catch(error => {
             console.log(error);

@@ -55,5 +55,11 @@ export const Feeds = styled.div`
             font-size: 1.4rem;
             margin: 0.6rem;
         `;
-            export const Interaction = styled.div``;
+            export const Interaction = styled.div`
+                span {
+                    i {
+                        cursor: pointer;
+                    }
+                }
+            `;
             export const Bookmarks = styled.div``;

@@ -11,9 +11,9 @@ function Messages({ children }) {
             <input type="text" placeholder="Tìm kiếm tin nhắn" />
         </$.Search>
         <$.Category>
-            <h6 className="active">Primary</h6>
-            <h6>General</h6>
-            <h6 className="messages-requests">Requests(6)</h6>
+            <h6 className="active">Online</h6>
+            <h6>Nhóm</h6>
+            <h6 className="messages-requests">Yêu cầu(6)</h6>
         </$.Category>
         {children}
     </$.Messages>
